@@ -24,6 +24,10 @@ jobs:
         steps:
             - checkout
             - run: npm audit
+            - run: 
+                name: Warn if job fails
+                command: echo "Job failure. Check pipeline"
+                when: on_fail
 
 
 
